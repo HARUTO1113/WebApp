@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config();
 const mysql = require('mysql');
 const session = require('express-session');
 const bcrypt=require('bcrypt');
@@ -16,7 +17,7 @@ const connection = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
-  database: process.env.DB_DATABASE
+  database: process.env.DB_DATABASE,
 });
 
 app.use(
@@ -59,6 +60,7 @@ app.post('/login', (req, res) => {
     'SELECT * FROM users WHERE email = ?',
     [email],
     (error, results) => {
+      console.log(error);
       if (results.length > 0) {
         const plain=req.body.password;
         const hash=results[0].password
