@@ -1,0 +1,632 @@
+* {
+    box-sizing: border-box;
+ }
+ 
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #e6e6e6;
+ }
+
+
+
+ /* ヘッダーのスタイルを更新 */
+.header {
+    padding: 15px 4%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* ロゴとナビゲーションを両端に配置 */
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9); /* 透明度を少し下げて見やすく */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ロゴのスタイルを更新 */
+.logo {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+.logo a{
+    text-decoration: none;
+    color: #333;
+}
+
+/* ナビゲーションのスタイルを更新 */
+.pc-nav {
+    display: flex;
+    align-items: center;
+}
+
+.pc-nav li {
+    margin: 0 0 0 30px;
+    font-size: 14px;
+    list-style: none;
+}
+
+.pc-nav a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.pc-nav a:hover {
+    color: #28d;
+}
+
+/* ログインボタンのスタイルを更新 */
+.log a {
+    background-color: #28d;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    
+}
+
+.log a:hover {
+    background-color: #17c;
+}
+
+/* トップセクションのスタイルを更新 */
+.top {
+    position: relative;
+    height: 850px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.background-image.active {
+    opacity: 0.8;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.content h1 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+/* 背景画像のスタイルは変更なし */
+
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+.login-top {
+  background: #456;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+}
+
+/* Reset top and bottom margins from certain elements */
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* The triangle form is achieved by a CSS hack */
+.login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #28d;
+}
+
+.login-header {
+  background: #28d;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.login-container {
+  background: #ebebeb;
+  padding: 12px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p {
+  padding: 12px;
+}
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+/* Text fields' focus effect */
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+  border-color: #888;
+}
+
+.login input[type="submit"] {
+  background: #28d;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  background: #17c;
+}
+
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {
+  border-color: #05a;
+}
+
+
+/* 既存のCSSに以下を追加 */
+
+
+
+.top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.7);
+}
+
+.midasi {
+    position: relative;
+    z-index: 1;
+    background: rgba(255,255,255,0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.midasi h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.cta-container {
+    margin-top: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    background-color: #28d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #17c;
+}
+
+.cta-button.secondary {
+    background-color: #4b4b4b;
+}
+
+.cta-button.secondary:hover {
+    background-color: #333;
+}
+
+.features {
+    padding: 4rem 2rem;
+    background-color: #f4f4f4;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    flex-basis: 30%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.feature-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .midasi h1 {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        display: block;
+        margin: 1rem 0;
+    }
+
+    .feature-item {
+        flex-basis: 100%;
+    }
+}
+
+.errors {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ED5974;
+    border: 1px solid #28d;
+    padding: 12px 34px;
+    line-height: 1.6;
+    border-radius: 6px;
+    list-style: outside;
+    background-color: #fff;
+    margin-top: 30px;
+  }
+
+  .back{
+    margin-top: 10px;
+  }
+
+  .back a {
+    background-color: #28d;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.back a:hover {
+    background-color: #17c;
+}
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3em;
+}
+
+/* planmainコンテナのスタイリング */
+.planmain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh; /* 必要に応じて調整 */
+  margin-top: 100px;
+}
+
+.myplan{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh; /* 必要に応じて調整 */
+  margin-top: 20px;
+}
+
+.headerplan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.date-input, .time-input {
+  padding: 10px;
+  margin: 0 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.date-input:focus, .time-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* time-schedule */
+.time-schedule {
+  min-width: 400px;
+  max-width: 400px;
+  list-style: none;
+  margin: 0;
+  padding-left: 20px;
+  border-left: 6px solid #a7be18;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.time-schedule li {
+  width: 100%;
+  margin: 0;
+  padding: 5px 0;
+  position: relative;
+}
+
+.time-schedule span.time {
+  width: 5em;
+  display: inline-block;
+  margin-left: -8em;
+  padding: 0 0 5px;
+  margin-top: 15px;
+  vertical-align: top;
+  position: relative;
+  text-align: right;
+  box-sizing: border-box;
+}
+
+.time-schedule span.time::after {
+  content: "";
+  position: absolute;
+  right: -35px;
+  top: 0;
+  background: #a7be18;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.time-schedule span.endtime {
+  display: inline-block;
+  position: absolute;
+  left: -6em;
+  top: 2.5em;
+  width: 5em;
+  text-align: right;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.time-schedule .sch_box {
+  display: inline-block;
+  width: calc(100% - 30px);
+  margin-left: 30px;
+  padding: 15px 10px;
+  vertical-align: middle;
+  background: #efefef;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.time-schedule .sch_title,
+.time-schedule .sch_tx {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.time-schedule .sch_title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.time-schedule .sch_tx {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+
+
+
+/* time-schedule */
+.title-input {
+  min-width: 400px;
+  max-width: 400px;
+  list-style: none;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  
+  box-sizing: border-box;
+}
+
+
+
+
+.title-input .sch_box {
+  display: inline-block;
+  width: 100%;
+  
+  padding: 15px 10px;
+  vertical-align: middle;
+  background: #efefef;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.title-input .sch_title{
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.title-input .sch_title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+
+
+/* 追加ボタン */
+.add-button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+/* 保存ボタン */
+.save-button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #a7be18;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #8fae14;
+}
+
+/* 新しい時間入力のカスタムスタイル */
+.custom-time-input {
+  padding: 10px 15px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 30px; /* 角を丸くする */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.custom-time-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.custom-time-input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+
+
+
+.login-message {
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin: 50px auto;
+  max-width: 400px;
+}
+
+.login-message h1 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.login-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}

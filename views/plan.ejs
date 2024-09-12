@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅行プラン作成</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include("header"); %>
+    <main class="planmain">
+        <% if(userId){ %>
+            <form action="/plan" method="post">
+                <div class="headerplan">
+                    <input type="date" class="date-input" id="dateInput" name="date">
+                </div>
+                <div class="title-input">
+                    <div class="sch_box">
+                        <input type="text" class="sch_title" placeholder="プラン名" name="title">
+                    </div>
+                </div>
+                <ul class="time-schedule">
+                
+                </ul>
+                <input type="time" id="new-time-input" class="custom-time-input" placeholder="時間を入力" name="times">
+                ~
+                <input type="time" id="end-time-input" class="custom-time-input" placeholder="時間を入力" name="endtimes">
+                <input type="button" class="add-button" value="追加" onclick="addScheduleItem()">
+                <input type="submit" class="save-button" value="保存">
+            </form>
+        <% }else{ %>
+            <div class="login-message">
+                <h1>ログインしてください</h1>
+                <a href="/login" class="login-button">ログインページへ</a>
+            </div>
+        <% } %>
+  </main>
+  
+  <script src="/js/style.js"></script>
+  
+</body>
+</html>

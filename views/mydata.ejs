@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title></title>
+</head>
+<body >
+    <main class="myplan">
+        <% if(userId){ %>
+            <% items.forEach((item)=>{ %>
+                <h2><%= item.title %></h2>
+            <ul class="time-schedule">
+                    <li>
+                        <span class="time"><%= item.hour %>:<%= item.minute %></span>
+                        ~
+                        <span class="endtime" name="times"><%= item.endhour %>:<%= item.endminute %></span>
+                        <div class="sch_box">
+                            <p class="sch_title"><%= item.title %></p>
+                            <p class="sch_tx"><%= item.text %></p>
+                        </div>
+                        </li>
+              </ul>
+              <% }) %>
+              <div class="back"><a href="/">戻る</a></div>
+        <% }else{ %>
+            <div class="login-message">
+                <h1>ログインしてください</h1>
+                <a href="/login" class="login-button">ログインページへ</a>
+            </div>
+        <% } %>
+    
+  
+</main>
+
+<script src="/js/style.js"></script>
+</body>
+</html>
